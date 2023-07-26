@@ -5,6 +5,7 @@
  * @dest: The destination string to copy to.
  * @src: The source string.
  * @n: The number of characters to copy.
+ *
  * Return: A pointer to the destination string.
  */
 char *_strncpy(char *dest, char *src, int n)
@@ -20,11 +21,11 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	if (index_dest < n)
 	{
-		int j = index_dest;
-		while (j < n)
+		int index_src = index_dest;
+		while (index_src < n)
 		{
-			dest[j] = '\0';
-			j++;
+			dest[index_src] = '\0';
+			index_src++;
 		}
 	}
 	return (result);
@@ -35,6 +36,7 @@ char *_strncpy(char *dest, char *src, int n)
  * @dest: The first string.
  * @src: The second string.
  * @n: The maximum number of bytes to use.
+ *
  * Return: A pointer to the concatenated string.
  */
 char *_strncat(char *dest, char *src, int n)
@@ -59,6 +61,7 @@ char *_strncat(char *dest, char *src, int n)
  * _strchr - Locates a character in a string.
  * @s: The string to search.
  * @c: The character to find.
+ *
  * Return: A pointer to the first occurrence of the character in the string.
  */
 char *_strchr(char *s, char c)

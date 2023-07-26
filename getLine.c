@@ -15,7 +15,6 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 
 	if (!*len) /* If there's nothing left in the buffer, fill it */
 	{
-		/* bfree((void **)info->cmd_buf); */
 		free(*buf);
 		*buf = NULL;
 		signal(SIGINT, sigintHandler);
@@ -63,7 +62,7 @@ ssize_t get_input(info_t *info)
 		return (-1);
 	if (buf_len) /* There are commands left in the chain buffer */
 	{
-		buf_end = buf_pos; /* Initialize a new iterator to the current buffer position */
+		buf_end = buf_pos;
 		current_pos = buf + buf_pos; /* Get a pointer for return */
 
 		check_chain(info, buf, &buf_end, buf_pos, buf_len);
@@ -81,11 +80,11 @@ ssize_t get_input(info_t *info)
 			info->cmd_buf_type = CMD_NORM;
 		}
 
-		*buf_ptr = current_pos; /* Pass back a pointer to the current command position */
+		*buf_ptr = current_pos;
 		return (_strlen(current_pos)); /* Return the length of the current command */
 	}
 
-	*buf_ptr = buf; /* This is not a command chain, so pass back the buffer from _getline() */
+	*buf_ptr = buf;
 	return (read_bytes); /* Return the length of the buffer from _getline() */
 }
 
@@ -137,7 +136,8 @@ int _getline(info_t *info, char **ptr, size_t *length)
 
 	c = _strchr(buf + buf_pos, '\n');
 	line_len = c ? 1 + (unsigned int)(c - buf) : buf_len;
-	new_buffer_ptr = _realloc(buffer_ptr, stored_bytes, stored_bytes ? stored_bytes + line_len : line_len + 1);
+	new_buffer_ptr = _realloc(buffer_ptr, stored_bytes,
+		stored_bytes ? stored_bytes + line_len : line_len + 1);
 	if (!new_buffer_ptr) /* MALLOC FAILURE! */
 		return (buffer_ptr ? (free(buffer_ptr), -1) : -1);
 

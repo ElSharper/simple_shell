@@ -1,61 +1,43 @@
-.TH SIMPLE-SHELL "17 APRIL 2020" "0.6" "Holberton Simple-Shell"
+.TH man 1 "16 Nov 2022" "0.1" "simple_shell man page"
 
 .SH NAME
-.B Simple Shell - a simple UNIX command interpreter in C
-\- Command interpreter (shell)
+.B simple_shell
+- Simple shell create in C to interact with a linux operating system.
 
 .SH SYNOPSIS
-Simple_shell [command] [file]
+ hsh [options] [file]
 
 .SH DESCRIPTION
-.Nm
-Is a command interpreter for the system. It takes in the name of a command_file
-and any arguments that that command can accept and runs the process in a child
-process fork producing the output of that command.
+Shell is a UNIX term for the interactive user interface with an operating system. The shell is the layer of programming that understands
+and executes the commands a user enters. In some systems, the shell is called a command interpreter. A shell usually implies an interface
+with a command syntax 
 
-.SH USAGE / COMPILATION
-All files are to be compiled using "gcc -Wall -Werror -Wextra -pedantic *.c -o hsh"
+.B Overview
 
-.SH RETURN VALUE
-.B hsh
-will return the exit stat, unless specified by an exit code.
+The simple shell is a command that reads lines from either a file or the terminal, interprets them, and generally executes other commands. It is the program that is started when a user logs into the system. It incorporates many features to aid interactive use and has the advantage that the interpretative language is common to both interactive and non-interactive use (shell scripts). That is, commands can be typed directly to the running simple shell or can be put into a file, which can be executed directly by the simple shell.
+.SH Return Value
 
-.SH EXAMPLES
-=========================================
+Always 0 for success, other number means failure.
 
-.SH INTERACTIVE MODE EXAMPLE
-.PP
-.PP
-$ ./hsh
-.PP
-##---> /bin/ls
-.PP
-hsh main.c shell.c
-.PP
-##---> exit
-.PP
-$
-.PP
-.PP
-=========================================
+.SH PATH
 
-.SH NON-INTERACTIVE MODE EXAMPLE
-.PP
-.PP
-$ echo "/bin/ls" | ./hsh
-.PP
-.PP
-hsh main.c shell.c test_ls_1
+It will look inside al directions in PATH env variable for executable.
 
-=========================================
+.SH
 
-.SH SEE ALSO
-.I sh(1)
+.SH OPTIONS
+.B simple_shell
+Command options will be typed after the main command followed by a space and a
+ '-' symbol.
+
+.SH EXAMPLE
+
+[command] [options]
+$ ls -l
 
 .SH BUGS
-When you type yes it shows an infinite loop.
+Single space required after argument.
 
-.SH AUTHORS
-.B Marisol Ramirez Henao - David Alejandro Hincapie
-.br
- \ @Marisol2201\          \ @dalejohgi
+
+.SH AUTHOR
+El Mehdi Bayoud, Hamza ouldjedda.

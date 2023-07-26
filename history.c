@@ -6,7 +6,6 @@
  *
  * Return: Allocated string containing the history file, or NULL on failure.
  */
-
 char *get_history_file(info_t *info)
 {
 	char *file_buf, *dir;

@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * _myhistory - Prints the history of commands executed, one command per line, 
+ * _myhistory - Prints the history of commands executed, one command per line,
  *              starting with line numbers from 0.
- * @info: A pointer to a structure containing command 
- * 				arguments and other variables.
- *  Return: Always 0
+ * @info: A pointer to a structure containing command arguments and other variables.
+ *
+ * Return: Always 0
  */
 int _myhistory(info_t *info)
 {
@@ -83,7 +83,8 @@ int print_alias(list_t *node)
 /**
  * _myalias - Mimics the behavior of the alias builtin command (see 'man alias').
  * @info: A pointer to a structure containing command arguments and other variables.
- *  Return: Always 0
+ *
+ * Return: Always 0
  */
 int _myalias(info_t *info)
 {

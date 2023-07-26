@@ -3,15 +3,16 @@
 /**
  * _myexit - concludes the shell program
  * @info: A structure housing potential arguments. Maintained to ensure
- *          function prototype consistency.
- *  Return: Terminates with a provided exit status
+ *         function prototype consistency.
+ *
+ * Return: Terminates with a provided exit status
  *         (0) if info.argv[0] is not "exit"
  */
 int _myexit(info_t *info)
 {
 	int verification;
 
-	if (info->argv[1])  /* only with exit argument */
+	if (info->argv[1]) /* only with exit argument */
 	{
 		verification = _erratoi(info->argv[1]);
 		if (verification == -1)
@@ -32,8 +33,9 @@ int _myexit(info_t *info)
 /**
  * _mycd - alters the current working directory of the process
  * @info: A structure housing potential arguments. Maintained to ensure
- *          function prototype consistency.
- *  Return: Always returns 0
+ *         function prototype consistency.
+ *
+ * Return: Always returns 0
  */
 int _mycd(info_t *info)
 {
@@ -82,8 +84,9 @@ int _mycd(info_t *info)
 /**
  * _myhelp - offers help data for the shell
  * @info: A structure housing potential arguments. Maintained to ensure
- *          function prototype consistency.
- *  Return: Always returns 0
+ *         function prototype consistency.
+ *
+ * Return: Always returns 0
  */
 int _myhelp(info_t *info)
 {
