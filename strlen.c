@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- * _strlen - Sizes the length of a string
+ * _strlenn - Sizes the length of a string
  * @string: String to be sized
  * Return: The length ot the string
  */
 
-int _strlen(const char *string)
+int _strlenn(const char *string)
 {
 	int length = 0;
 
