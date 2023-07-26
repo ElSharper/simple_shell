@@ -13,10 +13,10 @@ void print_binaryy(unsigned long int no)
 	{
 		if (no >> 1)
 			print_binaryy(no >> 1);
-		_putcharr((no & 1) + '0');
+		putchar((no & 1) + '0');
 	}
 	else
 	{
-		_putcharr('0');
+		putchar('0');
 	}
 }
