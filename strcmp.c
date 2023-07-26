@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- * _strcmp - Compares two strings
+ * _strcmpp - Compares two strings
  * @str1: String to be compared
  * @str2: String to be compared
  * Return: 0 if are the same, > 0 if str1 is greater, < 0 if str2 is greater
  */
-int _strcmp(char *str1, char *str2)
+int _strcmpp(char *str1, char *str2)
 {
 	int a;
 
