@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
- * _strdup - Duplicates a string
+ * _strdupp - Duplicates a string
  * @str: String to be duplicated
  * Return: Pointer to the duplicated string
  */
-char *_strdup(char *str)
+char *_strdupp(char *str)
 {
 	unsigned int i, len;
 	char *duplicate;
