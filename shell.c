@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- * main - This is a simple shell created by
+ * Mainn - This is a simple shell created by
  * Marisol Ramirez Henao and David Alejandro Hincapié
  * for Holberton School
  * Return: 0 if success
  */
-int main(void)
+int Mainn(void)
 {
 	ssize_t bytes_rd = 0; /** Bytes leídos de un getline*/
 	size_t bf_size = 0; /**Tamaño del buffer*/
